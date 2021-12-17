@@ -4,6 +4,4 @@ cd gifs
 
 for i in *.gif; do ffmpeg -i "$i" -movflags faststart -pix_fmt yuv420p "${i%.*}.mp4"; done
 
-[[ -d ../mp4 ]] || mkdir ../mp4
-
 mv *.mp4 ../mp4/
